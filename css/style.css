@@ -27,15 +27,17 @@ li {
 }
 
 img {
-  border: 5px solid blue;
-  border-radius: 35px;
   width: 100%;
-
-  max-height: 600px;
   object-fit: cover;
+  max-height: 600px;
 }
 figure {
   text-align: center;
+  border: 3px solid black;
+  height: fit-content;
+}
+figcaption {
+  padding-block: 20px;
 }
 .label {
   text-align: center;
@@ -53,8 +55,9 @@ figure {
   .grid {
     grid-template-columns: 1fr 1fr;
   }
-  img {
+  figure {
     border-radius: 1000px;
+    overflow: hidden;
   }
   .grid figure:last-child {
     grid-column: 1/-1;
@@ -68,7 +71,7 @@ figure {
   .grid figure:nth-child(3n) {
     grid-column: 1/-1;
   }
-  img {
+  figure {
     border-radius: 0;
   }
 }
@@ -76,23 +79,5 @@ figure {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1e1e1e;
-  }
-  header {
-    color: #f5e88c; /* amarillo claro */
-  }
-  figure {
-    background-color: #2b2b2b;
-    color: #f5e88c; /* amarillo claro */
-    border: 3px solid black;
-    padding: 10px;
-  }
-  footer a {
-    color: rgb(211, 211, 228);
   }
 }
